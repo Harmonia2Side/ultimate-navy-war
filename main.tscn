@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bad0flnqnss8v"]
+[gd_scene load_steps=3 format=3 uid="uid://bad0flnqnss8v"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_30uwo"]
+[ext_resource type="PackedScene" uid="uid://c75bao2neb05i" path="res://base.tscn" id="2_da4rb"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_30uwo")
+PlayerBase = ExtResource("2_da4rb")
 
 [node name="BaseStarPosition" type="Marker2D" parent="."]
 position = Vector2(100, 1000)
