@@ -8,18 +8,18 @@
 size = Vector2(128, 128)
 
 [node name="Base" type="Area2D"]
-scale = Vector2(2, 2)
 script = ExtResource("1_8rnq6")
 unit_scene = ExtResource("2_5g1k6")
-metadata/_edit_group_ = true
 
 [node name="SpawnLocation" type="Marker2D" parent="."]
-position = Vector2(72, -72)
+position = Vector2(152, -152)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_yv43c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("3_go2a8")
 
 [node name="SpawnTimer" type="Timer" parent="."]

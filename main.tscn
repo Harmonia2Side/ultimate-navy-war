@@ -8,4 +8,4 @@ script = ExtResource("1_30uwo")
 PlayerBase = ExtResource("2_da4rb")
 
 [node name="BaseStarPosition" type="Marker2D" parent="."]
-position = Vector2(100, 1000)
+position = Vector2(256, 832)
