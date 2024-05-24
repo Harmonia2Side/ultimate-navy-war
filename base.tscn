@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c75bao2neb05i"]
+
+[ext_resource type="Script" path="res://base.gd" id="1_8rnq6"]
+[ext_resource type="PackedScene" uid="uid://clsnrlp78c7vj" path="res://unit.tscn" id="2_adipu"]
+[ext_resource type="Texture2D" uid="uid://dtxs4nggd5lkt" path="res://icon.svg" id="2_eq2cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yv43c"]
+
+[node name="Base" type="Area2D"]
+script = ExtResource("1_8rnq6")
+unit_scene = ExtResource("2_adipu")
+
+[node name="SpawnLocation" type="Marker2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(74, -50)
+shape = SubResource("RectangleShape2D_yv43c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_eq2cr")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
