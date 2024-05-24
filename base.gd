@@ -16,7 +16,7 @@ func _on_timer_timeout():
 	# Cria uma nova instância
 	var unit = unit_scene.instantiate()
 	# Define localização de spawn conforme node
-	var unit_spawn_location =$SpawnLocation.position
+	var unit_spawn_location = $SpawnLocation.position
 	# Define direção da unidade # como?
 	#var direction = unit_spawn_location.
 	# define posição

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://clsnrlp78c7vj"]
 
 [ext_resource type="Script" path="res://unit.gd" id="1_g54k1"]
-[ext_resource type="Texture2D" uid="uid://dtxs4nggd5lkt" path="res://icon.svg" id="2_7qmi0"]
+[ext_resource type="Texture2D" uid="uid://dnmwifrowoa73" path="res://assets/unit_sprite.svg" id="2_n72dp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hws33"]
 size = Vector2(128, 127)
@@ -10,14 +10,15 @@ size = Vector2(128, 127)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7qmi0")
+"texture": ExtResource("2_n72dp")
 }],
 "loop": true,
 "name": &"Moving",
 "speed": 5.0
 }]
 
-[node name="Unit" type="Area2D"]
+[node name="Unit" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_g54k1")
 metadata/_edit_group_ = true
 
@@ -28,3 +29,4 @@ shape = SubResource("RectangleShape2D_hws33")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_saduj")
 animation = &"Moving"
+frame_progress = 0.832944

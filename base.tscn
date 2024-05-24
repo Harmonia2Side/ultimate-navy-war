@@ -2,23 +2,25 @@
 
 [ext_resource type="Script" path="res://base.gd" id="1_8rnq6"]
 [ext_resource type="PackedScene" uid="uid://clsnrlp78c7vj" path="res://unit.tscn" id="2_adipu"]
-[ext_resource type="Texture2D" uid="uid://dtxs4nggd5lkt" path="res://icon.svg" id="2_eq2cr"]
+[ext_resource type="Texture2D" uid="uid://76gfk8d4ly2m" path="res://assets/base_sprite.svg" id="3_go2a8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yv43c"]
+size = Vector2(128, 128)
 
 [node name="Base" type="Area2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_8rnq6")
 unit_scene = ExtResource("2_adipu")
+metadata/_edit_group_ = true
 
 [node name="SpawnLocation" type="Marker2D" parent="."]
+position = Vector2(72, -72)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(74, -50)
 shape = SubResource("RectangleShape2D_yv43c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_eq2cr")
+texture = ExtResource("3_go2a8")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 2.0
