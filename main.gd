@@ -12,10 +12,10 @@ func _ready():
 	#var direction = unit_spawn_location.
 	# define posição
 	basePlayer1.position = base_spawn_location # redundant?
-	# Spawna a a unidade adicionando ela à cena da base
+	# Spawna a a unidade adicionando ela à cena
 	add_child(basePlayer1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
